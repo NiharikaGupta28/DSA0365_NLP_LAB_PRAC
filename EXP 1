@@ -1,0 +1,19 @@
+import re
+
+text = "hello123 welcome to python 2026"
+
+# Match: checks from the beginning of the string
+match_result = re.match("hello", text)
+
+if match_result:
+    print("Match found at beginning")
+else:
+    print("No match found")
+
+# Search: finds pattern anywhere in the string
+search_result = re.search(r"\d+", text)
+
+if search_result:
+    print("Number found:", search_result.group())
+else:
+    print("No number found")
