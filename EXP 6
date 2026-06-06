@@ -1,0 +1,24 @@
+import random
+
+text = "I love NLP I love AI"
+
+words = text.split()
+
+# Create bigrams
+bigrams = []
+for i in range(len(words)-1):
+    bigrams.append((words[i], words[i+1]))
+
+# Start word
+current = "I"
+
+print("Generated Text:")
+for i in range(5):
+    print(current, end=" ")
+
+    next_words = [b[1] for b in bigrams if b[0] == current]
+
+    if not next_words:
+        break
+
+    current = random.choice(next_words)
