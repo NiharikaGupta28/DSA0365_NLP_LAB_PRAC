@@ -1,0 +1,17 @@
+from nltk.tag import UnigramTagger
+
+# Training data
+train_data = [
+    [("I", "PRP"), ("play", "VBP"), ("cricket", "NN")],
+    [("She", "PRP"), ("reads", "VBZ"), ("books", "NNS")],
+    [("They", "PRP"), ("eat", "VBP"), ("food", "NN")]
+]
+
+# Train tagger
+tagger = UnigramTagger(train_data)
+
+# Test sentence
+sentence = ["I", "eat", "food"]
+
+print("POS Tags:")
+print(tagger.tag(sentence))
