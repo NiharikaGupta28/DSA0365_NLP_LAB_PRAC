@@ -1,0 +1,9 @@
+def make_plural(word):
+    if word.endswith(("s", "x", "z", "ch", "sh")):
+        return word + "es"
+    else:
+        return word + "s"
+
+# Test
+noun = input("Enter a noun: ")
+print("Plural form:", make_plural(noun))
