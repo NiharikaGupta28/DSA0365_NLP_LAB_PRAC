@@ -1,8 +1,8 @@
 import nltk
 
-# Run once
-# nltk.download('punkt')
-# nltk.download('averaged_perceptron_tagger')
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('averaged_perceptron_tagger_eng')
 
 text = "NLP is an interesting subject"
 
@@ -11,4 +11,5 @@ words = nltk.word_tokenize(text)
 pos_tags = nltk.pos_tag(words)
 
 print("POS Tags:")
-print(pos_tags)
+for a in pos_tags:
+    print(a)
