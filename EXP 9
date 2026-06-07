@@ -1,0 +1,17 @@
+import re
+
+words = ["running", "played", "cats", "beautiful", "book"]
+
+for word in words:
+    if re.match(r".*ing$", word):
+        tag = "VBG"      # Verb ending with ing
+    elif re.match(r".*ed$", word):
+        tag = "VBD"      # Past tense verb
+    elif re.match(r".*s$", word):
+        tag = "NNS"      # Plural noun
+    elif re.match(r".*ful$", word):
+        tag = "JJ"       # Adjective
+    else:
+        tag = "NN"       # Noun
+
+    print(word, "->", tag)
