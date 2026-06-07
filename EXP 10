@@ -1,0 +1,17 @@
+words = ["running", "cats", "played", "book"]
+
+# Initial tagging (all words assumed as nouns)
+tags = ["NN"] * len(words)
+
+# Apply transformation rules
+for i in range(len(words)):
+    if words[i].endswith("ing"):
+        tags[i] = "VBG"
+    elif words[i].endswith("ed"):
+        tags[i] = "VBD"
+    elif words[i].endswith("s"):
+        tags[i] = "NNS"
+
+# Display results
+for word, tag in zip(words, tags):
+    print(word, "->", tag)
