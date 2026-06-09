@@ -1,0 +1,16 @@
+import nltk
+from nltk import CFG
+
+grammar = CFG.fromstring("""
+S -> NP VP
+NP -> 'I'
+VP -> 'play' 'cricket'
+""")
+
+parser = nltk.ChartParser(grammar)
+
+sentence = "I play cricket".split()
+
+for tree in parser.parse(sentence):
+    print(tree)
+    tree.pretty_print()
