@@ -1,0 +1,11 @@
+# Simple Top-Down Parser
+
+sentence = input("Enter sentence: ").split()
+
+if len(sentence) == 3:
+    if sentence[0] == "I" and sentence[1] == "play" and sentence[2] == "cricket":
+        print("Sentence Accepted")
+    else:
+        print("Sentence Rejected")
+else:
+    print("Sentence Rejected")
