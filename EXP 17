@@ -1,0 +1,14 @@
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
+from nltk.corpus import wordnet
+
+word = "computer"
+
+synsets = wordnet.synsets(word)
+
+for s in synsets:
+    print("Synset:", s.name())
+    print("Meaning:", s.definition())
+    print()
