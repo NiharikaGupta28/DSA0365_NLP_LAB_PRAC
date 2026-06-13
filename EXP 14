@@ -1,0 +1,15 @@
+# Simple Subject-Verb Agreement Checker
+
+sentence = input("Enter sentence: ")
+
+valid_sentences = [
+    "He plays",
+    "She plays",
+    "I play",
+    "They play"
+]
+
+if sentence in valid_sentences:
+    print("Sentence Agrees")
+else:
+    print("Sentence Does Not Agree")
