@@ -1,0 +1,7 @@
+text = "Ram has a car. He drives it daily."
+
+if "He" in text:
+    print("He -> Ram")
+
+if "it" in text:
+    print("it -> car")
