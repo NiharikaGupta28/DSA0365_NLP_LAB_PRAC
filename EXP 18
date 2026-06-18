@@ -1,0 +1,10 @@
+import re
+
+expression = input("Enter expression: ")
+
+pattern = r'^[A-Z][a-zA-Z]*\([a-zA-Z]+\)$'
+
+if re.match(pattern, expression):
+    print("Valid FOPC Expression")
+else:
+    print("Invalid FOPC Expression")
