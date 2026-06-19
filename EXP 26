@@ -1,0 +1,16 @@
+# English to French Translation
+
+translations = {
+    "hello": "bonjour",
+    "good morning": "bonjour",
+    "thank you": "merci",
+    "goodbye": "au revoir",
+    "how are you": "comment allez-vous"
+}
+
+text = input("Enter English text: ").lower()
+
+if text in translations:
+    print("French:", translations[text])
+else:
+    print("Translation not available")
