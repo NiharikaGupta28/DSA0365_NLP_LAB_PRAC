@@ -1,0 +1,16 @@
+conversation = [
+    "Hello",
+    "How are you?",
+    "I am fine",
+    "Thank you"
+]
+
+for sentence in conversation:
+    if sentence.endswith("?"):
+        print(sentence, "-> Question")
+    elif "thank" in sentence.lower():
+        print(sentence, "-> Thanks")
+    elif "hello" in sentence.lower():
+        print(sentence, "-> Greeting")
+    else:
+        print(sentence, "-> Statement")
