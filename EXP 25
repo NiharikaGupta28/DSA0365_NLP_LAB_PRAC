@@ -1,0 +1,8 @@
+prompt = input("Enter a prompt: ")
+
+if "nature" in prompt.lower():
+    print("Nature is beautiful and full of life.")
+elif "technology" in prompt.lower():
+    print("Technology makes our lives easier.")
+else:
+    print("This is generated text based on your prompt.")
